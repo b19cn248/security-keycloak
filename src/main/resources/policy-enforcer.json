@@ -1,0 +1,49 @@
+{
+  "realm": "OpenLearnHub",
+  "auth-server-url": "http://localhost:7080",
+  "resource": "open-learn-hub",
+  "credentials": {
+    "secret": "qlqavnwtaRpKwpsu3dL2oRllPNUobuv2"
+  },
+  "paths": [
+    {
+      "path": "/api/v1/products/*",
+      "methods": [
+        {
+          "method": "GET",
+          "scopes": [
+            "GET"
+          ]
+        },
+        {
+          "method": "POST",
+          "scopes": [
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/api/v1/admin/*",
+      "methods": [
+        {
+          "method": "GET",
+          "scopes": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/api/v1/users/*",
+      "methods": [
+        {
+          "method": "GET",
+          "scopes": [
+            "GET"
+          ]
+        }
+      ]
+    }
+  ]
+}
