@@ -5,6 +5,7 @@
   "credentials": {
     "secret": "qlqavnwtaRpKwpsu3dL2oRllPNUobuv2"
   },
+  "enforcement-mode" : "DISABLED",
   "paths": [
     {
       "path": "/api/v1/products/*",
@@ -19,6 +20,12 @@
           "method": "POST",
           "scopes": [
             "POST"
+          ]
+        },
+        {
+          "method": "PUT",
+          "scopes": [
+            "update"
           ]
         }
       ]

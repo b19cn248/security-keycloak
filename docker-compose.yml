@@ -1,0 +1,12 @@
+services:
+  authorizationService:
+    image: authorization-service
+    container_name: authorization-service
+    ports:
+      - "8080:8080"
+    networks:
+      - shop-sport-micro
+
+networks:
+  shop-sport-micro:
+    external: true

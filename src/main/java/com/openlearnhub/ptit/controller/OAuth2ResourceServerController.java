@@ -17,10 +17,7 @@ package com.openlearnhub.ptit.controller;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -44,5 +41,10 @@ public class OAuth2ResourceServerController {
     @GetMapping("/admin")
     public String sos(@AuthenticationPrincipal Jwt jwt) {
         return String.format("Hello, %s!", jwt.getClaimAsString("preferred_username"));
+    }
+
+    @PutMapping("/products")
+    public String update(@AuthenticationPrincipal Jwt jwt) {
+        return jwt.getClaimAsString("preferred_username") + " is update a product";
     }
 }
